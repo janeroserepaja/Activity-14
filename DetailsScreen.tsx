@@ -1,3 +1,4 @@
+```tsx
 import React from 'react';
 import {
   SafeAreaView,
@@ -28,7 +29,11 @@ export default function DetailsScreen({ navigation, route }: any) {
 
         <View style={styles.card}>
           <Text style={styles.label}>
-            Description
+            Product Details
+          </Text>
+
+          <Text style={styles.productId}>
+            Product ID: {product.id || 'N/A'}
           </Text>
 
           <Text style={styles.description}>
@@ -110,6 +115,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 
+  productId: {
+    fontSize: 14,
+    color: '#9B7BC1',
+    marginBottom: 10,
+  },
+
   description: {
     fontSize: 15,
     lineHeight: 23,
@@ -131,3 +142,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+```
