@@ -14,6 +14,14 @@ export default function DetailsScreen({ navigation, route }: any) {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.name}>{product.name}</Text>
+
+        <Text style={styles.description}>
+          {product.description || 'No description available.'}
+        </Text>
+
+        <Text style={styles.price}>
+          ₱{product.price || 0}
+        </Text>
       </View>
     </SafeAreaView>
   );
@@ -35,5 +43,17 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#4B3B61',
     textAlign: 'center',
+  },
+  description: {
+    fontSize: 16,
+    color: '#77658C',
+    textAlign: 'center',
+    marginTop: 15,
+  },
+  price: {
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#8A5CC2',
+    marginTop: 20,
   },
 });
